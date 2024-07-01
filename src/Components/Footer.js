@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div className=' bg-blue-500 min-h-24 text-center'>
-        Footer
-    </div>
+    <footer className='flex justify-center bg-white min-h-12 items-center text-center md:text-2xl'>
+        Little Lemon &copy; 2024
+    </footer>
   )
 }
