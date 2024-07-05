@@ -1,21 +1,471 @@
 /*
 *  html5resetcss
 */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
-ins{background-color:#ff9;color:#000;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
 
 .no-scroll {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+
+.green {
+  color: #4CAF50; /* Adjust the color value to match darken($secondary, 20%) */
+}
+
+.red {
+  color: #D32F2F; /* Adjust the color value to match darken($error, 10%) */
+}
+
+.alert {
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+#p {
+  margin-top: -5px;
+  font-size: 0.5em;
+  font-weight: 100;
+  color: #333333; /* Adjust the color value to match darken($dark, 10%) */
+  letter-spacing: 1px;
+}
+
+#button, .dot {
+  cursor: pointer;
+}
+
+#success-box {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  left: 12%;
+  background: linear-gradient(to bottom right, #4CAF50 40%, #8BC34A 100%); /* Adjust the gradient values to match $success and $secondary */
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.1); /* Adjust rgba($gray, 10%) */
+  perspective: 40px;
+}
+
+#error-box {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  right: 12%;
+  background: linear-gradient(to bottom left, #F44336 40%, #FF9800 100%); /* Adjust the gradient values to match $error and $orange */
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.1); /* Adjust rgba($gray, 10%) */
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  right: 6%;
+}
+
+.dot:hover {
+  background: #CCCCCC; /* Adjust the color value to match darken($white, 20%) */
+}
+
+.two {
+  right: 12%;
+  opacity: 0.5;
+}
+
+.face {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #333333; /* Adjust the color value to match $dark */
+  top: 21%;
+  left: 37.5%;
+  z-index: 2;
+  animation: bounce 1s ease-in infinite;
+}
+
+.face2 {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #333333; /* Adjust the color value to match $dark */
+  top: 21%;
+  left: 37.5%;
+  z-index: 2;
+  animation: roll 3s ease-in-out infinite;
+}
+
+.eye {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #333333; /* Adjust the color value to match $dark */
+  border-radius: 50%;
+  top: 40%;
+  left: 20%;
+}
+
+.right {
+  left: 68%;
+}
+
+.mouth {
+  position: absolute;
+  top: 43%;
+  left: 41%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.happy {
+  border: 2px solid;
+  border-color: transparent #333333 #333333 transparent; /* Adjust the color value to match $dark */
+  transform: rotate(45deg);
+}
+
+.sad {
+  top: 49%;
+  border: 2px solid;
+  border-color: #333333 transparent transparent #333333; /* Adjust the color value to match $dark */
+  transform: rotate(45deg);
+}
+
+.shadow {
+  position: absolute;
+  width: 21%;
+  height: 3%;
+  opacity: 0.5;
+  background: #333333; /* Adjust the color value to match $dark */
+  left: 40%;
+  top: 43%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.scale {
+  animation: scale 1s ease-in infinite;
+}
+
+.move {
+  animation: move 3s ease-in-out infinite;
+}
+
+.message {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  height: 40%;
+  top: 47%;
+}
+
+.button-box {
+  position: absolute;
+  background: white;
+  width: 50%;
+  height: 15%;
+  border-radius: 20px;
+  top: 73%;
+  left: 25%;
+  outline: 0;
+  border: none;
+  box-shadow: 2px 2px 10px rgba(51, 51, 51, 0.5); /* Adjust rgba($dark, .5) */
+  transition: all 0.5s ease-in-out;
+}
+
+.button-box:hover {
+  background: #F2F2F2; /* Adjust the color value to match darken($white, 5%) */
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
   }
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+    transform: rotate(168deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+
+.body {
+	align-items: center;
+	background-color: var(--bg-body);
+	background-image: var(--bg-body-gradient);
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	transition: background-color 2s var(--transition-easing);
+}
+
+.body.hover {
+	background-color: var(--bg-body-hover);
+}
+
+.button {
+	background-color: var(--bg-button);
+	border: 0.125rem solid var(--border-button);
+	cursor: pointer;
+	letter-spacing: 0.2125rem;
+	line-height: 1;
+	overflow: hidden;
+	padding: 1.25rem 1.875rem;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	transition:
+		background-color 0.3s var(--transition-easing),
+		border 1s var(--transition-easing),
+		color 0.6s var(--transition-easing);
+}
+
+.button a {
+	color: var(--color-button);
+	font-family: var(--font-button);
+	position: relative;
+	text-decoration: none;
+	white-space: nowrap;
+	z-index: 2;
+}
+
+.button .mask {
+	background-color: var(--bg-mask);
+	height: 6.25rem;
+	position: absolute;
+	transform: translate3d(-120%, -3.125rem, 0) rotate3d(0, 0, 1, 45deg);
+	transition: all 1.1s var(--transition-easing);
+	width: 12.5rem;
+	z-index: 1;
+}
+
+.button .shift {
+	display: inline-block;
+	transition: all 1.1s var(--transition-easing);
+	vertical-align: text-top;
+}
+
+.button:hover {
+	background-color: var(--bg-button-hover);
+	border-color: var(--border-button-hover);
+	box-shadow: var(--shadow-button-hover);
+}
+
+.button:hover a {
+	color: var(--color-button-hover);
+}
+
+.button:hover .mask {
+	background-color: var(--bg-mask-hover);
+	transform: translate3d(120%, -6.25rem, 0) rotate3d(0, 0, 1, 90deg);
+}
+
+.button:hover .shift {
+	transform: translateX(0.3125rem);
+}
+
+.button:active {
+	background-color: var(--bg-button-active);
+}
+
+.button:active a {
+	color: var(--color-button-active);
+}
+
+.mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12.5rem;
+  height: 6.25rem;
+  background: rgba(245, 214, 87, 0.5);
+  transform: translate3d(-200%, -3.125rem, 0) rotate3d(0, 0, 1, 45deg);
+  transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+}
+#link:hover .mask {
+  background: rgba(245, 214, 87, 1);
+  transform: translate3d(120%, -6.25rem, 0) rotate3d(0, 0, 1, 90deg);
+}

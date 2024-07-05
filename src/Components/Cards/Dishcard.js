@@ -8,7 +8,7 @@ export default function Dishcard(prop) {
         {prop.data.description}
         <img
             src={prop.data.image}
-            className='shadow-lg shadow-[#495E57] w-24 h-24 rounded-lg md:w-48 md:h-48 lg:mr-20 lg:w-64'
+            className='shadow-lg shadow-[#495E57] w-24 h-24 rounded-lg md:w-48 md:h-48 lg:mr-20 '
             alt={`${prop.data.dish}`}/>
         </article>
         <div className='font-monster md:text-2xl'>

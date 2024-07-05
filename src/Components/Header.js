@@ -1,5 +1,6 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 export default function Header() {
 
   const navLinks = [
@@ -9,19 +10,19 @@ export default function Header() {
     },
     {
       name:"About",
-      path:"/about",
+      path:"/#",
     },
     {
       name:"Menu",
-      path:"/menu",
+      path:"/#",
     },
     {
       name:"Reservations",
-      path:"/reservations",
+      path:"/#",
     },
     {
       name:"Order Online",
-      path:"/order-online",
+      path:"/#",
     },
   ]
 
@@ -40,7 +41,6 @@ export default function Header() {
         <nav className='flex px-4 py-3 justify-between items-center align-center bg-white min-h-24 text-center'>
           <img
             src={require('../Assets/images/logo.jpg')}
-            loading='lazy'
             className='w-[250px] md:w-[350px] lg:w-[250px]'
             alt='Logo'
           />
@@ -52,14 +52,16 @@ export default function Header() {
             )}
           </button>
           <ul className='hidden lg:flex flex-row gap-5 font-monster text-xl'>
-          {navLinks.map((link)=>
-            <li>
+          {navLinks.map((link,index)=>
+            <li key={link.name}>
+              <Link to={link.path}>
               <button
               className='relative text-[#495E57] hover:translate-y-[2px] group py-5 text-center font-bold min-h-10'
               >
                 {link.name}
                 <div className='w-full h-1 bg-yellow-500 absolute bottom-0 left-0 transform scale-x-0 origin-center group-hover:scale-x-100 transition-transform duration-700'/>
               </button>
+              </Link>
             </li>
           )}
           </ul>
@@ -68,12 +70,14 @@ export default function Header() {
       </header>
       <div className={`z-10 fixed top-24 md:top-[120px] w-full bg-white transition-all duration-1000 ease-in-out ${burgerClicked ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <ul className='flex flex-col font-monster text-2xl md:text-4xl'>
-        {navLinks.map((link)=>
-        <li>
+        {navLinks.map((link,index)=>
+        <li key={index}>
+        <Link to={link.path}>
         <button
           className='py-5  border-t-2 w-full border-gray text-center font-bold min-h-10'>
           {link.name}
         </button>
+        </Link>
         </li>
         )}
         </ul>
