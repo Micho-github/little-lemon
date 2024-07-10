@@ -74,7 +74,7 @@ export default function Header() {
         <li key={index}>
         <Link to={link.path}>
         <button
-          className='py-5  border-t-2 w-full border-gray text-center font-bold min-h-10'>
+          className='py-5 border-t-2 w-full border-gray text-center font-bold min-h-10'>
           {link.name}
         </button>
         </Link>

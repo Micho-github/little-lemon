@@ -83,7 +83,7 @@ export default function ConfirmBooking({
         <p className="shadow-lg lg:w-64 text-center border-solid border-2 rounded-full font-bold">{Occasion ? Occasion:"None"}</p>
       </div>
       <div className="w-full flex items-center align-center justify-center ">
-        <button onClick={handleSubmit} className="mt-5 active:bg-green-500 lg:w-72 w-full mb-5 md:mt-5 text-xl md:text-3xl bg-[#F4CE14] font-serif py-3 rounded-full font-bold">
+        <button onClick={handleSubmit} className="mt-5 lg:w-72 w-full mb-5 md:mt-5 text-xl md:text-3xl bg-[#F4CE14] font-serif py-3 rounded-full font-bold">
           Confirm
         </button>
       </div>

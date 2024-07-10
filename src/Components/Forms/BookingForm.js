@@ -362,7 +362,7 @@ const BookingForm = ({
       </div>
 
       <div className="w-full flex items-center align-center justify-center ">
-        <button type="submit" className="active:bg-green-500 lg:w-72 w-full mb-5 md:mt-5 text-xl md:text-3xl bg-[#F4CE14] font-serif py-3 rounded-full font-bold">
+        <button type="submit" className=" lg:w-72 w-full mb-5 md:mt-5 text-xl md:text-3xl bg-[#F4CE14] font-serif py-3 rounded-full font-bold">
           Continue
         </button>
       </div>
